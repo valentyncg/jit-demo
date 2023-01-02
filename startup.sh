@@ -1,0 +1,3 @@
+echo "Starting application..."
+echo "AZURE_VAULT_KEY = ${AZURE_VAULT_KEY}"
+java -Dmicrosoft.oauth.username=bi.admin@contguard.com -Dcom.okta.sdk.impl.http.httpclient.HttpClientRequestExecutor.connPoolControl.maxTotal=200 -Dcom.okta.sdk.impl.http.httpclient.HttpClientRequestExecutor.connPoolControl.maxPerRoute=1 -Dspring.profiles.active=kubernetes-prod -Dserver.ssl.key-store-password= -Dazure.keyvault.client-key=${AZURE_VAULT_KEY}  -jar user-api.jar
