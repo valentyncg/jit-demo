@@ -10,7 +10,7 @@ ENV DATASOURCE_URL=0\
     SECRET=0\
     ENVIRONMENT=0\
     OAUTH_USERNAME=0\
-    OAUTH_PASSWORD=2
+    OAUTH_PASSWORD=1
 VOLUME /tmp
 EXPOSE 8080
 ADD /target/user-api.jar user-api.jar
