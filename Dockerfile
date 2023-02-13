@@ -16,4 +16,3 @@ EXPOSE 8080
 ADD /target/user-api.jar user-api.jar
 ADD startup.sh /startup.sh
 CMD /startup.sh
-# ENTRYPOINT ["java", "-Dmicrosoft.oauth.username=bi.admin@contguard.com", "-Dcom.okta.sdk.impl.http.httpclient.HttpClientRequestExecutor.connPoolControl.maxTotal=200", "-Dcom.okta.sdk.impl.http.httpclient.HttpClientRequestExecutor.connPoolControl.maxPerRoute=1", "-Dspring.profiles.active=dev", "-Dserver.ssl.key-store-password=", "-jar", "/user-api.jar"]
